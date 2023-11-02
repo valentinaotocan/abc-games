@@ -1,19 +1,19 @@
 $flex-alignments: ("center", "space-between", "space-around", "space-evenly", "flex-start", "flex-end");
 
 @each $align in $flex-alignments {
-  .justify-#{$align} {
+  .jc-#{$align} {
     justify-content: #{$align};
   }
 
-  .items-#{$align} {
+  .ai-#{$align} {
     align-items: #{$align};
   }
 
-  .justify-items-#{$align} {
+  .ji-#{$align} {
     justify-items: #{$align};
   }
 
-  .content-#{$align} {
+  .ac-#{$align} {
     align-content: #{$align};
   }
 }

@@ -8,8 +8,8 @@ function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <nav>
-      <Link to="/" className="logo">
+    <nav className='d-flex jc-space-between ai-center'>
+      <Link to="/" className="logo d-flex ai-center">
         <img src={logo} alt="Logo" />
         <h1 className='text'>Games</h1>
       </Link>
