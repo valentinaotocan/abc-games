@@ -11,7 +11,7 @@ function Navbar() {
     <nav>
       <Link to="/" className="logo">
         <img src={logo} alt="Logo" />
-        Games
+        <h1 className='text'>Games</h1>
       </Link>
       <button
         type="button"

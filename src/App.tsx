@@ -7,9 +7,9 @@ function App() {
   const containerClassName = theme === "light" ? "light" : "dark";
 
   return (
-    <div className={`${containerClassName} background`}>
+    <div className={`${containerClassName} background p-2`}>
       <Navbar />
-      <div className="text">
+      <div className="text pt-1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
         tempora obcaecati distinctio repudiandae soluta deleniti accusantium
         minima ratione reprehenderit. Eos error laboriosam reprehenderit quis,

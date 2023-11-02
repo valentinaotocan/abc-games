@@ -1,4 +1,17 @@
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: toRem(55px);
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      padding-right: toRem(8px);
+    }
+  }
+  button {
+    width: toRem(40px);
+    height: toRem(40px);
+  }
 }
