@@ -1,6 +1,7 @@
 import logo from '../assets/logo.svg';
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme-context';
+import { BiSolidJoystick, BiJoystick } from "react-icons/bi";
 
 function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -14,7 +15,11 @@ function Navbar() {
         type="button"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        Toggle {theme === "light" ? "dark" : "light"}
+        {theme === "light" ? (
+          <BiSolidJoystick size="1.5rem" />
+        ) : (
+          <BiJoystick size="1.5rem" />
+        )}
       </button>
     </nav>
   );
