@@ -1,9 +1,9 @@
-@import 'reset';
-@import "functions";
-@import 'colors';
-@import 'spacing';
+@import "reset";
+@import "./abstracts/functions";
+@import "./abstracts/colors";
+@import "./abstracts/spacing";
 
-@import 'Navbar';
+@import "Navbar";
 
 a {
   text-decoration: none;
