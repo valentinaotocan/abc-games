@@ -2,15 +2,17 @@ import logo from '../assets/logo.svg';
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme-context';
 import { BiSolidJoystick, BiJoystick } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <nav>
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src={logo} alt="Logo" />
-      </div>
+        Games
+      </Link>
       <button
         type="button"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
