@@ -5,24 +5,31 @@ interface ThemeProviderType {
 }
 
 interface ThemeContextType {
-  theme: "light" | "dark";
+  theme: "light" | "dark" | null;
   setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: 'light',
+  theme: null,
   setTheme: () => {},
 });
 
-export const ThemeProvider= ({ children }: ThemeProviderType) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>("light");
+export const ThemeProvider = ({ children }: ThemeProviderType) => {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? (savedTheme as "light" | "dark") : "dark";
+  });
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {
-    localStorage.setItem("theme", theme);
+    if (!theme) {
+      setTheme("dark");
+    } else {
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   useEffect(() => {
