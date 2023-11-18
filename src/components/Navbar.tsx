@@ -8,19 +8,19 @@ function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <nav className='d-flex jc-space-between ai-center'>
+    <nav className="d-flex jc-space-between ai-center">
       <Link to="/" className="logo d-flex ai-center">
         <img src={logo} alt="Logo" />
-        <h1 className='text'>Games</h1>
+        <h1 className="text">Games</h1>
       </Link>
       <button
         type="button"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
         {theme === "light" ? (
-          <BiSolidJoystick size="1.5rem" />
+          <BiSolidJoystick size="1.5rem" className="d-flex" />
         ) : (
-          <BiJoystick size="1.5rem" />
+          <BiJoystick size="1.5rem" className="d-flex" />
         )}
       </button>
     </nav>
