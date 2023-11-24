@@ -3,14 +3,14 @@ $black: #000;
 
 .light.background {
   background-color:$white;
-  .text {
+  .text-clr {
     color:$black;
   }
 }
 
 .dark.background {
   background-color:$black;
-  .text {
+  .text-clr {
     color:$white;
   }
 }

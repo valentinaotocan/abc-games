@@ -1,4 +1,5 @@
 $flex-alignments: ("center", "space-between", "space-around", "space-evenly", "flex-start", "flex-end");
+$flex-wrap-values: ("nowrap", "wrap", "wrap-reverse");
 
 @each $align in $flex-alignments {
   .jc-#{$align} {
@@ -17,3 +18,9 @@ $flex-alignments: ("center", "space-between", "space-around", "space-evenly", "f
     align-content: #{$align};
   }
 }
+
+@each $wrap in $flex-wrap-values {
+    .fw-#{$wrap} {
+      flex-wrap: #{$wrap};
+    }
+  }

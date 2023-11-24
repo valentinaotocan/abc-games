@@ -10,7 +10,7 @@ function App() {
   return (
     <div className={`${containerClassName} background p-2`}>
       <Navbar />
-      <div className="text pt-1">
+      <div className="text-clr d-flex fw-wrap pt-2" style={{ gap: "2rem" }}>
        <Game />
       </div>
     </div>

@@ -11,7 +11,7 @@ function Navbar() {
     <nav className="d-flex jc-space-between ai-center">
       <Link to="/" className="logo d-flex ai-center">
         <img src={logo} alt="Logo" />
-        <h1 className="text">Games</h1>
+        <h1 className="text-clr">Games</h1>
       </Link>
       <button
         type="button"

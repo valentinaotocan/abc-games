@@ -1,0 +1,16 @@
+.card {
+  border: 3px groove #45BEA9;
+  border-radius: 5%;
+  overflow: hidden;
+  width: 25rem;
+  img {
+    height: 15rem;
+    width: 100%;
+  }
+  .rating {
+    align-items: center;
+    p {
+      padding-left: 0.5rem;
+    }
+  }
+}

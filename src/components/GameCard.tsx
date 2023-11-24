@@ -7,13 +7,15 @@ interface Props {
 
 function GameCard({game}: Props) {
   return (
-    <div>
+    <div className="card">
       <img src={game.background_image} alt="" />
-      <h2>{game.name}</h2>
-      <p>
-        <BsFillSuitHeartFill />
-        {game.rating}
-      </p>
+      <div className="p-1">
+        <h2>{game.name}</h2>
+        <div className="rating d-flex">
+          <BsFillSuitHeartFill />
+          <p>{game.rating}</p>
+        </div>
+      </div>
     </div>
   );
 }
