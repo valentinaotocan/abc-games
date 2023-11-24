@@ -1,4 +1,5 @@
 import useFetch from "../hooks/useFetch";
+import GameCard from "./GameCard";
 
 function Game() {
   const { games, error } = useFetch();
@@ -10,7 +11,7 @@ function Game() {
       ) : (
         <ul>
           {games.map((game) => (
-            <li key={game.id}>{game.name}</li>
+            <GameCard key={game.id} game={game}/>
           ))}
         </ul>
       )}

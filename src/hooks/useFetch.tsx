@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
+import { Game } from "../interfaces";
 
-interface Game {
-  id: number;
-  name: string;
-}
 
 function useFetch() {
   const [games, setGames] = useState<Game[]>([]);
