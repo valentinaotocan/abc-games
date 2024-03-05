@@ -1,5 +1,6 @@
 import { Game } from '../interfaces';
 import { BsFillSuitHeartFill } from "react-icons/bs";
+import getCroppedImageUrl from '../services/image-url';
 
 interface Props {
   game: Game
@@ -17,7 +18,7 @@ function GameCard({ game }: Props) {
 
   return (
     <div className="card">
-      <img src={game.background_image} alt="Image" />
+      <img src={getCroppedImageUrl(game.background_image)} alt="Image" />
       <div className="p-1">
         <h2>{game.name}</h2>
         <div className="rating d-flex">
