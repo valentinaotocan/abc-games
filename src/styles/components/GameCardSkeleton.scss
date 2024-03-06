@@ -1,0 +1,32 @@
+.skeleton {
+  animation: blink 2s infinite;
+  &__text {
+    h2,
+    p {
+      background-color: $grey;
+      border-radius: 10px;
+    }
+
+    h2 {
+      height: toRem(24px);
+      max-width: 80%;
+    }
+
+    p {
+      height: toRem(16px);
+      max-width: 50%;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
