@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import useFetch from "../hooks/useFetch";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
+import useGames from "../hooks/useGames";
 
 function Game() {
-  const { games, isLoading, error } = useFetch();
+  const { data, isLoading, error } = useGames();
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 896);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function Game() {
         </>
       ) : (
         <>
-          {games.map((game) => (
+          {data.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
         </>

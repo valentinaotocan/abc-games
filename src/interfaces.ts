@@ -4,3 +4,8 @@ export interface Game {
   background_image: string;
   rating: number;
 }
+
+export interface Genre {
+  id: number;
+  name: string;
+}
