@@ -1,6 +1,23 @@
-$flex-alignments: ("center", "space-between", "space-around", "space-evenly", "flex-start", "flex-end");
+$flex-directions: ("row", "row-reverse", "column", "column-reverse");
+$flex-alignments: (
+  "center",
+  "space-between",
+  "space-around",
+  "space-evenly",
+  "flex-start",
+  "flex-end"
+);
 $flex-wrap-values: ("nowrap", "wrap", "wrap-reverse");
+$gap-amounts: (1, 2, 3, 4, 5, 6, 7, 8);
 
+// flex-directions
+@each $direction in $flex-directions {
+  .fd-#{$direction} {
+    flex-direction: #{$direction};
+  }
+}
+
+// flex-alignments
 @each $align in $flex-alignments {
   .jc-#{$align} {
     justify-content: #{$align};
@@ -19,8 +36,16 @@ $flex-wrap-values: ("nowrap", "wrap", "wrap-reverse");
   }
 }
 
+// flex-wrap
 @each $wrap in $flex-wrap-values {
-    .fw-#{$wrap} {
-      flex-wrap: #{$wrap};
-    }
+  .fw-#{$wrap} {
+    flex-wrap: #{$wrap};
   }
+}
+
+// gap
+@each $gap in $gap-amounts {
+  .gap-#{$gap} {
+    gap: #{$gap}rem;
+  }
+}
