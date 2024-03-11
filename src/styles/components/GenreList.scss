@@ -1,0 +1,10 @@
+.genre-list {
+  &__img {
+    width: toRem(32px);
+    height: toRem(32px);
+    border-radius: 5px;
+  }
+  @media(max-width: toRem(567px)) {
+    width: toRem(125px);
+  }
+}

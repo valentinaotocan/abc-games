@@ -8,16 +8,16 @@
 @import "./components/Navbar";
 @import './components//GameCard';
 @import './components/GameCardSkeleton';
+@import './components/GenreList';
+
+@import './App';
 
 a {
   text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
+
 

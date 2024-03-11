@@ -9,16 +9,15 @@ function App() {
   const containerClassName = theme === "light" ? "light" : "dark";
 
   return (
-    <div className={`${containerClassName} min-h-screen background p-2`}>
+    <div className={`${containerClassName} min-h-screen background p-2 app`}>
       <Navbar />
-      <div className="text-clr">
-        <GenreList />
-      </div>
-      <div
-        className="text-clr d-flex fw-wrap jc-center pt-2"
-        style={{ gap: "2rem" }}
-      >
-        <Game />
+      <div className="text-clr app__main d-flex pt-2">
+        <div className="app__main__genre-list d-flex fd-column gap-1 mr-2">
+          <GenreList />
+        </div>
+        <div className="app__main__game d-grid gap-2">
+          <Game />
+        </div>
       </div>
     </div>
   );

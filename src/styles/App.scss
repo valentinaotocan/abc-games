@@ -1,0 +1,19 @@
+.app {
+  &__main__game {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(toRem(230px), 1fr));
+  }
+  @media(max-width: toRem(567px)) {
+    padding-left: toRem(24px);
+    padding-right: toRem(24px);
+    &__main {
+      flex-direction: column;
+    }
+    &__main__genre-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: toRem(32px);
+      margin-right: 0;
+    }
+  }
+}
