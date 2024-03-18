@@ -2,7 +2,12 @@ import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 
 function GenreList() {
-  const { data } = useGenres();
+  const { data, isLoading, error } = useGenres();
+
+  if (error) return null;
+  
+  if (isLoading) return null;
+
   return (
     <>
       {data.map((genre) => (
