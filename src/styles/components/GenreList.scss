@@ -4,6 +4,10 @@
     height: toRem(32px);
     border-radius: 5px;
   }
+  &__name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
   @media(max-width: toRem(567px)) {
     width: toRem(125px);
   }

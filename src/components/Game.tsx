@@ -1,9 +1,10 @@
 import GameCard from "./GameCard";
 import useGames from "../hooks/useGames";
 import Spinner from "./Spinner";
+import { GameProps } from "../interfaces";
 
-function Game() {
-  const { data, isLoading, error } = useGames();
+function Game({selectedGenre}: GameProps) {
+  const { data, isLoading, error } = useGames(selectedGenre);
 
   return (
     <>

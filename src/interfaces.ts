@@ -10,3 +10,11 @@ export interface Genre {
   name: string;
   image_background: string;
 }
+
+export interface GenreProps {
+  onSelectedGenre: (genre: Genre) => void;
+}
+
+export interface GameProps {
+  selectedGenre: Genre | null;
+}
