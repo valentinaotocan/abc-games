@@ -2,11 +2,11 @@ import useGenres from "../hooks/useGenres";
 import { GenreProps } from "../interfaces";
 import getCroppedImageUrl from "../services/image-url";
 
-function GenreList({onSelectedGenre}: GenreProps) {
+function GenreList({ selectedGenre, onSelectedGenre }: GenreProps) {
   const { data, isLoading, error } = useGenres();
 
   if (error) return null;
-  
+
   if (isLoading) return null;
 
   return (
@@ -18,7 +18,14 @@ function GenreList({onSelectedGenre}: GenreProps) {
             alt={genre.name}
             className="genre-list__img mr-1"
           />
-          <p className="genre-list__name" onClick={() => onSelectedGenre(genre)}>{genre.name}</p>
+          <p
+            className={`genre-list__name ${
+              selectedGenre && selectedGenre?.id === genre.id ? "active" : ""
+            }`}
+            onClick={() => onSelectedGenre(genre)}
+          >
+            {genre.name}
+          </p>
         </div>
       ))}
     </>

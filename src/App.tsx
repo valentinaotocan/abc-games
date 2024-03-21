@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <div className="text-clr app__main d-flex pt-2">
         <div className="app__main__genre-list d-flex fd-column gap-1">
-          <GenreList onSelectedGenre={(genre) => setSelectedGenre(genre)} />
+          <GenreList selectedGenre={selectedGenre} onSelectedGenre={(genre) => setSelectedGenre(genre)} />
         </div>
         <div className="app__main__game d-grid gap-2">
           <Game selectedGenre={selectedGenre} />

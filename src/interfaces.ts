@@ -12,6 +12,7 @@ export interface Genre {
 }
 
 export interface GenreProps {
+  selectedGenre: Genre | null;
   onSelectedGenre: (genre: Genre) => void;
 }
 

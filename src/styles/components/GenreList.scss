@@ -12,3 +12,9 @@
     width: toRem(125px);
   }
 }
+
+.active {
+  font-weight: bold;
+  color: $ocean-turquoise;
+  font-size: toRem(18px);
+}
